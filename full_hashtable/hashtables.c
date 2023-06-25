@@ -250,16 +250,16 @@ int main(void)
   struct HashTable *ht = create_hash_table(2);
 
   // DEFAULT
-  // hash_table_insert(ht, "line_1", "Tiny hash table\n");
-  // hash_table_insert(ht, "line_2", "Filled beyond capacity\n");
-  // hash_table_insert(ht, "line_3", "Linked list saves the day!\n");
-  // printf("%s", hash_table_retrieve(ht, "line_1"));
-  // printf("%s", hash_table_retrieve(ht, "line_2"));
-  // printf("%s", hash_table_retrieve(ht, "line_3"));
-  // int old_capacity = ht->capacity;
-  // ht = hash_table_resize(ht);
-  // int new_capacity = ht->capacity;
-  // printf("\nResizing hash table from %d to %d.\n", old_capacity, new_capacity);
+  hash_table_insert(ht, "line_1", "Tiny hash table\n");
+  hash_table_insert(ht, "line_2", "Filled beyond capacity\n");
+  hash_table_insert(ht, "line_3", "Linked list saves the day!\n");
+  printf("%s", hash_table_retrieve(ht, "line_1"));
+  printf("%s", hash_table_retrieve(ht, "line_2"));
+  printf("%s", hash_table_retrieve(ht, "line_3"));
+  int old_capacity = ht->capacity;
+  ht = hash_table_resize(ht);
+  int new_capacity = ht->capacity;
+  printf("\nResizing hash table from %d to %d.\n", old_capacity, new_capacity);
 
   // // MY TESTS
   // hash_table_insert(ht, "tim", "texas\n"); // inserts index 1
